@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Speech Recognition in Python</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/index.css') }}"
+    />
+  </head>
+  <body>
+    <section class="pimg1">
+      <div class="ptext">
+        <span class="textbg"> Government Official </span>
+        <div id="speechContainer">
+          <h1>Upload Audio file To Check </h1>
+          <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <br />
+            <input type="submit" id="submitButton" value="Check" />
+          </form>
+      </div>
+    </section>
+    <section class="section section-light">
+      <h2>Government Official Voice Real Or Synthetic </h2>
+      <p>
+        {% if transcript != "" %}
+      <div id="speechTranscriptContainer">
+        <h1>Output</h1>
+        <p id="speechText">{{ transcript }}</p>
+      </div>
+      {% endif %}
+      </p>
+    </section>
+    <section class="pimg2">
+      <div class="ptext">
+        <span class="textbg"> Fraud Transaction </span>
+        <div id="speechContainer">
+          <h1>Upload Audio File To Check</h1>
+          <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <br />
+            <input type="submit" id="submitButton" value="Check" />
+          </form>
+      </div>
+    </section>
+    <section class="section section-light">
+      <h2>Check If The Voice Is Natural Or Synthetic</h2>
+      <p>
+        {% if transcript != "" %}
+      <div id="speechTranscriptContainer">
+        <h1>Output</h1>
+        <p id="speechText">{{ transcript }}</p>
+      </div>
+      {% endif %}
+      </p>
+    </section>
+    <section class="pimg3">
+      <div class="ptext">
+        <span class="textbg"> Sign In </span>
+        <div id="speechContainer">
+          <h1>Upload new File</h1>
+          <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <br />
+            <input type="submit" id="submitButton" value="Check" />
+          </form>
+      </div>
+    </section>
+    <section class="section section-light">
+      <h2>Section One</h2>
+      <p>
+        {% if transcript != "" %}
+      <div id="speechTranscriptContainer">
+        <h1>Output</h1>
+        <p id="speechText">{{ transcript }}</p>
+      </div>
+      {% endif %}
+      </p>
+    </section>
+    <div id="speechContainer">
+      <h1>Upload new File</h1>
+      <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <br />
+        <input type="submit" id="submitButton" value="Transcribe" />
+      </form>
+
+      {% if transcript != "" %}
+      <div id="speechTranscriptContainer">
+        <h1>Check If The Voice Is Natural Or Synthetic</h1>
+        <p id="speechText">{{ transcript }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
